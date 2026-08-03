@@ -19,12 +19,13 @@ services:
       - .env.dev
 
   sitoprova-nginx:
-    image: nginx:latest
+    image: nginx:alpine
     ports:
-      - "8001:80"
+      - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - staticfiles:/app/staticfiles:ro
+      - ./landing:/app/landing:ro
     depends_on:
       - sitoprova-django-web
 volumes:

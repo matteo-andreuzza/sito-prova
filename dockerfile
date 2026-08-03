@@ -50,6 +50,7 @@ EXPOSE 8000
 RUN chmod +x  /app/entrypoint.prod.sh
 
 RUN mkdir -p /app/staticfiles && chown appuser:appuser /app/staticfiles
+RUN mkdir -p /app/landing && chown appuser:appuser /app/landing
  
 # Start the application using Gunicorn
 CMD ["/app/entrypoint.prod.sh"]
