@@ -48,6 +48,8 @@ EXPOSE 8000
 
 # Make entry file executable
 RUN chmod +x  /app/entrypoint.prod.sh
+
+RUN mkdir -p /app/staticfiles && chown appuser:appuser /app/staticfiles
  
 # Start the application using Gunicorn
 CMD ["/app/entrypoint.prod.sh"]

@@ -28,6 +28,7 @@ static/
 # Editor
 .vscode/
 .idea/
+graphify-out/
 
 # OS
 Thumbs.db
